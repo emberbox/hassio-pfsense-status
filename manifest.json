@@ -1,0 +1,9 @@
+{
+  "domain": "pfsense_status",
+  "name": "pfSense Status",
+  "documentation": "https://github.com/emberbox/hassio-pfsense-status",
+  "issue_tracker": "https://github.com/emberbox/hassio-pfsense-status/issues",
+  "dependencies": [],
+  "codeowners": ["@emberbox"],
+  "requirements": []
+}
