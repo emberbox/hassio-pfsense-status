@@ -1,0 +1,26 @@
+{
+    "callid": "5fce2b06c5336",
+    "action": "system_stats",
+    "message": "ok",
+    "data": {
+        "stats": {
+            "cpu": "561898364|555270229",
+            "mem": "16",
+            "uptime": "12 Days 19 Hours 15 Minutes 00 Seconds",
+            "pfstate": "1452\/190000",
+            "pfstatepercent": "1",
+            "temp": "26.9",
+            "datetime": "20201207Z131550",
+            "interfacestatistics": "649330842,297057012,758.68 GiB,93.57 GiB,0,312,0,291678189,649818287,93.58 GiB,759.38 GiB,0,44,0,",
+            "interfacestatus": "WAN^up^99.228.130.181^^1000baseT &lt;full-duplex&gt;~LAN^up^192.168.1.1^^1000baseT &lt;full-duplex&gt;~",
+            "cpufreq": "Current: 1600 MHz, Max: 1601 MHz",
+            "load_average": [
+                "0.23",
+                "0.29",
+                "0.26"
+            ],
+            "mbuf": "3046\/1000000",
+            "mbufpercent": "0"
+        }
+    }
+}

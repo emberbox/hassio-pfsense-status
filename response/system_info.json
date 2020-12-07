@@ -1,0 +1,41 @@
+{
+    "callid": "5fce2b30a3eef",
+    "action": "system_info",
+    "message": "ok",
+    "data": {
+        "info": {
+            "sys": {
+                "platform": {
+                    "name": "pfSense",
+                    "descr": "pfSense"
+                },
+                "serial_no": "",
+                "device_id": "2689735592702d5452fc"
+            },
+            "pfsense_version": {
+                "product_version_string": "2.4.5-RELEASE-p1",
+                "product_version": "2.4.5-RELEASE",
+                "product_version_patch": "1"
+            },
+            "pfsense_remote_version": {
+                "version": "2.4.5_1",
+                "installed_version": "2.4.5_1",
+                "pkg_version_compare": "="
+            },
+            "os_verison": "FreeBSD 11.3-STABLE",
+            "cpu_type": {
+                "cpu_model": "Intel(R) Celeron(R) CPU  J3160  @ 1.60GHz",
+                "cpu_count": "4",
+                "logic_cpu_count": "1 package(s) x 4 core(s)",
+                "cpu_freq": "Current: 1600 MHz, Max: 1601 MHz"
+            },
+            "kernel_pti_status": "enabled",
+            "mds_mitigation": "inactive",
+            "bios": {
+                "vendor": "American Megatrends Inc.",
+                "version": "5.11",
+                "date": "10\/24\/2018"
+            }
+        }
+    }
+}

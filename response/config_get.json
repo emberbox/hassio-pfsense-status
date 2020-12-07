@@ -1,0 +1,1268 @@
+{
+    "callid": "5fce26bc7a64b",
+    "action": "config_get",
+    "message": "ok",
+    "data": {
+        "config_file": "\/cf\/conf\/config.xml",
+        "config": {
+            "version": "19.1",
+            "lastchange": "",
+            "system": {
+                "optimization": "normal",
+                "hostname": "emberboxRouter",
+                "domain": "emberbox.ca",
+                "dnsserver": [
+                    "8.8.8.8",
+                    "4.4.4.8"
+                ],
+                "dnsallowoverride": "on",
+                "group": [
+                    {
+                        "name": "all",
+                        "description": "All Users",
+                        "scope": "system",
+                        "gid": "1998",
+                        "member": [
+                            "0"
+                        ]
+                    },
+                    {
+                        "name": "admins",
+                        "description": "System Administrators",
+                        "scope": "system",
+                        "gid": "1999",
+                        "member": [
+                            "0"
+                        ],
+                        "priv": [
+                            "page-all"
+                        ]
+                    }
+                ],
+                "user": [
+                    {
+                        "name": "admin",
+                        "descr": "System Administrator",
+                        "scope": "system",
+                        "groupname": "admins",
+                        "bcrypt-hash": "$2y$10$rp8IACxNyvns\/D1HmaeeIOrIM1\/dtESnUgUuPYna5qA6dUc33v0tO",
+                        "uid": "0",
+                        "priv": [
+                            "user-shell-access"
+                        ]
+                    }
+                ],
+                "nextuid": "2000",
+                "nextgid": "2000",
+                "timeservers": "2.pfsense.pool.ntp.org",
+                "webgui": {
+                    "protocol": "http",
+                    "loginautocomplete": "",
+                    "ssl-certref": "5f1a263ad84db",
+                    "dashboardcolumns": "2",
+                    "port": "",
+                    "max_procs": "2",
+                    "disablehttpredirect": ""
+                },
+                "disablesegmentationoffloading": "",
+                "disablelargereceiveoffloading": "",
+                "ipv6allow": "",
+                "maximumtableentries": "400000",
+                "powerd_ac_mode": "hadp",
+                "powerd_battery_mode": "hadp",
+                "powerd_normal_mode": "hadp",
+                "bogons": {
+                    "interval": "monthly"
+                },
+                "already_run_config_upgrade": "",
+                "timezone": "America\/Toronto",
+                "acb": {
+                    "encryption_password": "Pa$$me2004",
+                    "enable": "yes",
+                    "gold_username": "",
+                    "hint": "",
+                    "frequency": "every",
+                    "hours": "0",
+                    "month": "*",
+                    "day": "*",
+                    "dow": "*",
+                    "numman": ""
+                },
+                "ssh": {
+                    "enable": "enabled"
+                },
+                "serialspeed": "115200",
+                "primaryconsole": "serial",
+                "sshguard_threshold": "",
+                "sshguard_blocktime": "",
+                "sshguard_detection_time": "",
+                "sshguard_whitelist": "",
+                "maximumstates": "",
+                "aliasesresolveinterval": "",
+                "maximumfrags": "",
+                "enablenatreflectionhelper": "yes",
+                "reflectiontimeout": "",
+                "enablebinatreflection": "yes",
+                "enablenatreflectionpurenat": "yes"
+            },
+            "interfaces": {
+                "wan": {
+                    "if": "re1",
+                    "blockpriv": "",
+                    "blockbogons": "",
+                    "descr": "WAN",
+                    "spoofmac": "",
+                    "alias-address": "",
+                    "alias-subnet": "32",
+                    "enable": "",
+                    "ipaddr": "dhcp",
+                    "dhcphostname": "",
+                    "dhcprejectfrom": "",
+                    "adv_dhcp_pt_timeout": "",
+                    "adv_dhcp_pt_retry": "",
+                    "adv_dhcp_pt_select_timeout": "",
+                    "adv_dhcp_pt_reboot": "",
+                    "adv_dhcp_pt_backoff_cutoff": "",
+                    "adv_dhcp_pt_initial_interval": "",
+                    "adv_dhcp_pt_values": "SavedCfg",
+                    "adv_dhcp_send_options": "",
+                    "adv_dhcp_request_options": "",
+                    "adv_dhcp_required_options": "",
+                    "adv_dhcp_option_modifiers": "",
+                    "adv_dhcp_config_advanced": "",
+                    "adv_dhcp_config_file_override": "",
+                    "adv_dhcp_config_file_override_path": "",
+                    "ipaddrv6": "dhcp6",
+                    "dhcp6-duid": "",
+                    "dhcp6-ia-pd-len": "0",
+                    "adv_dhcp6_prefix_selected_interface": "lan"
+                },
+                "lan": {
+                    "enable": "",
+                    "if": "re0",
+                    "descr": "LAN",
+                    "ipaddr": "192.168.1.1",
+                    "subnet": "24",
+                    "spoofmac": ""
+                }
+            },
+            "staticroutes": "",
+            "dhcpd": {
+                "lan": {
+                    "enable": "",
+                    "range": {
+                        "from": "192.168.1.100",
+                        "to": "192.168.1.200"
+                    },
+                    "failover_peerip": "",
+                    "dhcpleaseinlocaltime": "",
+                    "defaultleasetime": "",
+                    "maxleasetime": "",
+                    "netmask": "",
+                    "gateway": "",
+                    "domain": "",
+                    "domainsearchlist": "",
+                    "ddnsdomain": "",
+                    "ddnsdomainprimary": "",
+                    "ddnsdomainsecondary": "",
+                    "ddnsdomainkeyname": "",
+                    "ddnsdomainkeyalgorithm": "hmac-md5",
+                    "ddnsdomainkey": "",
+                    "mac_allow": "",
+                    "mac_deny": "",
+                    "ddnsclientupdates": "allow",
+                    "tftp": "",
+                    "ldap": "",
+                    "nextserver": "",
+                    "filename": "",
+                    "filename32": "",
+                    "filename64": "",
+                    "rootpath": "",
+                    "numberoptions": "",
+                    "staticmap": [
+                        {
+                            "mac": "b0:95:75:16:b1:b8",
+                            "cid": "DECO M5",
+                            "ipaddr": "192.168.1.2",
+                            "hostname": "deco-M5",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "84:16:f9:f7:e1:ec",
+                            "cid": "TPLinkExtender",
+                            "ipaddr": "192.168.1.3",
+                            "hostname": "RE450",
+                            "descr": "TPLinkExtender",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "b0:95:75:16:b0:e4",
+                            "cid": "Deco-M5-2",
+                            "ipaddr": "192.168.1.4",
+                            "hostname": "Deco-M5-2",
+                            "descr": "Deco-M5-2",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:1b:a9:bd:b7:d5",
+                            "cid": "Brother MFC-7860DW Printer",
+                            "ipaddr": "192.168.1.6",
+                            "hostname": "7860DW",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:80:87:42:ab:6e",
+                            "cid": "",
+                            "ipaddr": "192.168.1.7",
+                            "hostname": "C3400-42AB6E",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:25:f6:02:10:51",
+                            "cid": "NetTalk",
+                            "ipaddr": "192.168.1.8",
+                            "hostname": "NetTalk",
+                            "descr": "NetTalk",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:25:90:a0:e9:10",
+                            "cid": "NAS",
+                            "ipaddr": "192.168.1.13",
+                            "hostname": "NAS",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:25:90:a0:e9:11",
+                            "cid": "NAS2",
+                            "ipaddr": "192.168.1.14",
+                            "hostname": "NAS",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "44:61:32:d0:3b:99",
+                            "cid": "EcoBee",
+                            "ipaddr": "192.168.1.21",
+                            "hostname": "EcoBee",
+                            "descr": "EcoBee",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "5c:41:5a:53:cf:49",
+                            "cid": "Alexa",
+                            "ipaddr": "192.168.1.22",
+                            "hostname": "alexa",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "64:16:66:78:58:ce",
+                            "cid": "Nest",
+                            "ipaddr": "192.168.1.23",
+                            "hostname": "Nest",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:18:dd:04:0f:13",
+                            "cid": "HomeRunner",
+                            "ipaddr": "192.168.1.24",
+                            "hostname": "HomeRunner",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "b0:2a:43:91:5c:e4",
+                            "cid": "Google-Home-Mini",
+                            "ipaddr": "192.168.1.25",
+                            "hostname": "Google-Home-Mini",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "44:07:0b:e7:74:12",
+                            "cid": "HallTVcast",
+                            "ipaddr": "192.168.1.26",
+                            "hostname": "HallTVcast",
+                            "descr": "HallTVcast",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "40:16:3b:d1:8f:c9",
+                            "cid": "SamsungTV",
+                            "ipaddr": "192.168.1.27",
+                            "hostname": "SamsungTV",
+                            "descr": "SamsungTV basement",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "18:fe:34:fa:25:d6",
+                            "cid": "",
+                            "ipaddr": "192.168.1.33",
+                            "hostname": "OpenMQTTGateway",
+                            "descr": "OpenMQTTGateway",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "0c:80:63:79:75:ab",
+                            "cid": "TPLinkSwitch1",
+                            "ipaddr": "192.168.1.40",
+                            "hostname": "TPLinkSwitch1",
+                            "descr": "TPLinkSwitch1",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "0c:80:63:79:6a:17",
+                            "cid": "TPLinkSwitch2",
+                            "ipaddr": "192.168.1.41",
+                            "hostname": "TPLinkSwitch1",
+                            "descr": "TPLinkSwitch2",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "0c:80:63:fd:5d:19",
+                            "cid": "TPLinkSwitch3",
+                            "ipaddr": "192.168.1.42",
+                            "hostname": "TPLinkSwitch3",
+                            "descr": "TPLinkSwitch3",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "0c:80:63:4f:2c:60",
+                            "cid": "TPLinkSwitch4",
+                            "ipaddr": "192.168.1.43",
+                            "hostname": "TPLinkSwitch4",
+                            "descr": "TPLinkSwitch4",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "0c:80:63:fd:60:a0",
+                            "cid": "TPLinkSwitch5",
+                            "ipaddr": "192.168.1.44",
+                            "hostname": "TPLinkSwitch5",
+                            "descr": "TPLinkSwitch5",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "b0:be:76:29:c2:f5",
+                            "cid": "TPLinkOutlet2",
+                            "ipaddr": "192.168.1.46",
+                            "hostname": "TPLinkOutlet2",
+                            "descr": "TPLinkOutlet2",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "60:01:94:c1:4f:56",
+                            "cid": "TasmotaOutlet1",
+                            "ipaddr": "192.168.1.51",
+                            "hostname": "TasmotaOutlet1",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "84:0d:8e:51:0e:2a",
+                            "cid": "TasmotaOutlet2",
+                            "ipaddr": "192.168.1.52",
+                            "hostname": "TasmotaOutlet2",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "ec:fa:bc:6e:f3:91",
+                            "cid": "",
+                            "ipaddr": "192.168.1.61",
+                            "hostname": "porchlight1",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "b4:e6:2d:0a:ad:9b",
+                            "cid": "GarageOpener",
+                            "ipaddr": "192.168.1.62",
+                            "hostname": "GarageOpener",
+                            "descr": "Garage Opener",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:26:b0:de:df:c8",
+                            "cid": "MacMini",
+                            "ipaddr": "192.168.1.79",
+                            "hostname": "MacMini",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "00:26:b0:f4:43:04",
+                            "cid": "",
+                            "ipaddr": "192.168.1.80",
+                            "hostname": "MacMini",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "c8:63:f1:fa:8d:34",
+                            "cid": "PlayStation",
+                            "ipaddr": "192.168.1.81",
+                            "hostname": "PlayStation",
+                            "descr": "PlayStation",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "a4:1f:72:fe:bf:fa",
+                            "cid": "",
+                            "ipaddr": "192.168.1.89",
+                            "hostname": "BASE-DESKTOP",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "e8:b1:fc:2e:a3:74",
+                            "cid": "",
+                            "ipaddr": "192.168.1.98",
+                            "hostname": "TSOPC01JHN9",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        },
+                        {
+                            "mac": "f0:18:98:08:fe:c8",
+                            "cid": "",
+                            "ipaddr": "192.168.1.99",
+                            "hostname": "Pavels-MBP",
+                            "descr": "",
+                            "filename": "",
+                            "rootpath": "",
+                            "defaultleasetime": "",
+                            "maxleasetime": "",
+                            "gateway": "",
+                            "domain": "",
+                            "domainsearchlist": "",
+                            "ddnsdomain": "",
+                            "ddnsdomainprimary": "",
+                            "ddnsdomainkeyname": "",
+                            "ddnsdomainkey": "",
+                            "tftp": "",
+                            "ldap": ""
+                        }
+                    ]
+                }
+            },
+            "dhcpdv6": {
+                "lan": {
+                    "range": {
+                        "from": "::1000",
+                        "to": "::2000"
+                    },
+                    "ramode": "assist",
+                    "rapriority": "medium"
+                }
+            },
+            "snmpd": {
+                "syslocation": "",
+                "syscontact": "",
+                "rocommunity": "public"
+            },
+            "diag": {
+                "ipv6nat": {
+                    "ipaddr": ""
+                }
+            },
+            "syslog": {
+                "filterdescriptions": "1",
+                "reverse": "",
+                "nentries": "50",
+                "sourceip": "",
+                "ipproto": "ipv4"
+            },
+            "nat": {
+                "outbound": {
+                    "mode": "advanced",
+                    "rule": [
+                        {
+                            "interface": "wan",
+                            "source": {
+                                "network": "127.0.0.0\/8"
+                            },
+                            "sourceport": "",
+                            "target": "",
+                            "destination": {
+                                "any": ""
+                            },
+                            "natport": "",
+                            "descr": "Auto created rule - localhost to WAN",
+                            "created": {
+                                "time": "1596645353",
+                                "username": "Manual Outbound NAT Switch"
+                            }
+                        },
+                        {
+                            "interface": "wan",
+                            "source": {
+                                "network": "::1\/128"
+                            },
+                            "sourceport": "",
+                            "target": "",
+                            "destination": {
+                                "any": ""
+                            },
+                            "natport": "",
+                            "descr": "Auto created rule - localhost to WAN",
+                            "created": {
+                                "time": "1596645353",
+                                "username": "Manual Outbound NAT Switch"
+                            }
+                        },
+                        {
+                            "interface": "wan",
+                            "source": {
+                                "network": "192.168.1.0\/24"
+                            },
+                            "sourceport": "",
+                            "target": "",
+                            "destination": {
+                                "any": ""
+                            },
+                            "natport": "",
+                            "descr": "Auto created rule - LAN to WAN",
+                            "created": {
+                                "time": "1596645353",
+                                "username": "Manual Outbound NAT Switch"
+                            }
+                        }
+                    ]
+                },
+                "separator": "",
+                "rule": [
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "destination": {
+                            "network": "wanip",
+                            "port": "5001"
+                        },
+                        "protocol": "tcp",
+                        "target": "192.168.1.13",
+                        "local-port": "5001",
+                        "interface": "wan",
+                        "descr": "NAS",
+                        "associated-rule-id": "nat_5f19f8b2336b77.36936052",
+                        "updated": {
+                            "time": "1595537586",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1595537586",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "destination": {
+                            "network": "wanip",
+                            "port": "8123"
+                        },
+                        "protocol": "tcp",
+                        "target": "192.168.1.13",
+                        "local-port": "8123",
+                        "interface": "wan",
+                        "descr": "HASSIO",
+                        "associated-rule-id": "nat_5f19f90dd84e39.54020596",
+                        "updated": {
+                            "time": "1595537677",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1595537677",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "destination": {
+                            "network": "wanip",
+                            "port": "8123"
+                        },
+                        "protocol": "tcp",
+                        "target": "192.168.1.14",
+                        "local-port": "32400",
+                        "interface": "wan",
+                        "descr": "PLEX",
+                        "associated-rule-id": "",
+                        "updated": {
+                            "time": "1597800183",
+                            "username": "admin@192.168.1.136 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1597800183",
+                            "username": "admin@192.168.1.136 (Local Database)"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "destination": {
+                            "network": "wanip",
+                            "port": "80"
+                        },
+                        "protocol": "tcp",
+                        "target": "192.168.1.13",
+                        "local-port": "80",
+                        "interface": "wan",
+                        "descr": "HTTP",
+                        "associated-rule-id": "nat_5f19f986042506.60755963",
+                        "updated": {
+                            "time": "1595537798",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1595537798",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "destination": {
+                            "network": "wanip",
+                            "port": "443"
+                        },
+                        "protocol": "tcp",
+                        "target": "192.168.1.13",
+                        "local-port": "443",
+                        "interface": "wan",
+                        "descr": "HTTPS",
+                        "associated-rule-id": "nat_5f19f99cbb24c2.44496993",
+                        "updated": {
+                            "time": "1595537820",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1595537820",
+                            "username": "admin@192.168.1.89 (Local Database)"
+                        }
+                    }
+                ]
+            },
+            "filter": {
+                "rule": [
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "interface": "wan",
+                        "protocol": "tcp",
+                        "destination": {
+                            "address": "192.168.1.13",
+                            "port": "5001"
+                        },
+                        "descr": "NAT NAS",
+                        "associated-rule-id": "nat_5f19f8b2336b77.36936052",
+                        "tracker": "1595537586",
+                        "created": {
+                            "time": "1595537586",
+                            "username": "NAT Port Forward"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "interface": "wan",
+                        "protocol": "tcp",
+                        "destination": {
+                            "address": "192.168.1.13",
+                            "port": "8123"
+                        },
+                        "descr": "NAT HASSIO",
+                        "associated-rule-id": "nat_5f19f90dd84e39.54020596",
+                        "tracker": "1595537677",
+                        "created": {
+                            "time": "1595537677",
+                            "username": "NAT Port Forward"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "interface": "wan",
+                        "protocol": "tcp",
+                        "destination": {
+                            "address": "192.168.1.13",
+                            "port": "80"
+                        },
+                        "descr": "NAT HTTP",
+                        "associated-rule-id": "nat_5f19f986042506.60755963",
+                        "tracker": "1595537798",
+                        "created": {
+                            "time": "1595537798",
+                            "username": "NAT Port Forward"
+                        }
+                    },
+                    {
+                        "source": {
+                            "any": ""
+                        },
+                        "interface": "wan",
+                        "protocol": "tcp",
+                        "destination": {
+                            "address": "192.168.1.13",
+                            "port": "443"
+                        },
+                        "descr": "NAT HTTPS",
+                        "associated-rule-id": "nat_5f19f99cbb24c2.44496993",
+                        "tracker": "1595537820",
+                        "created": {
+                            "time": "1595537820",
+                            "username": "NAT Port Forward"
+                        }
+                    },
+                    {
+                        "id": "",
+                        "tracker": "1601170761",
+                        "type": "pass",
+                        "interface": "wan",
+                        "ipprotocol": "inet",
+                        "tag": "",
+                        "tagged": "",
+                        "max": "",
+                        "max-src-nodes": "",
+                        "max-src-conn": "",
+                        "max-src-states": "",
+                        "statetimeout": "",
+                        "statetype": "keep state",
+                        "os": "",
+                        "protocol": "tcp",
+                        "source": {
+                            "any": "",
+                            "port": "32400"
+                        },
+                        "destination": {
+                            "address": "192.168.1.13",
+                            "port": "32400"
+                        },
+                        "descr": "",
+                        "updated": {
+                            "time": "1601170761",
+                            "username": "admin@192.168.1.101 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1601170761",
+                            "username": "admin@192.168.1.101 (Local Database)"
+                        }
+                    },
+                    {
+                        "id": "",
+                        "tracker": "1601170782",
+                        "type": "pass",
+                        "interface": "wan",
+                        "ipprotocol": "inet",
+                        "tag": "",
+                        "tagged": "",
+                        "max": "",
+                        "max-src-nodes": "",
+                        "max-src-conn": "",
+                        "max-src-states": "",
+                        "statetimeout": "",
+                        "statetype": "keep state",
+                        "os": "",
+                        "protocol": "tcp",
+                        "source": {
+                            "any": "",
+                            "port": "32400"
+                        },
+                        "destination": {
+                            "address": "192.168.1.13",
+                            "port": "32400"
+                        },
+                        "descr": "PLEX",
+                        "updated": {
+                            "time": "1601170782",
+                            "username": "admin@192.168.1.101 (Local Database)"
+                        },
+                        "created": {
+                            "time": "1601170782",
+                            "username": "admin@192.168.1.101 (Local Database)"
+                        }
+                    },
+                    {
+                        "type": "pass",
+                        "ipprotocol": "inet",
+                        "descr": "Default allow LAN to any rule",
+                        "interface": "lan",
+                        "tracker": "0100000101",
+                        "source": {
+                            "network": "lan"
+                        },
+                        "destination": {
+                            "any": ""
+                        }
+                    },
+                    {
+                        "type": "pass",
+                        "ipprotocol": "inet6",
+                        "descr": "Default allow LAN IPv6 to any rule",
+                        "interface": "lan",
+                        "tracker": "0100000102",
+                        "source": {
+                            "network": "lan"
+                        },
+                        "destination": {
+                            "any": ""
+                        }
+                    }
+                ],
+                "separator": {
+                    "wan": ""
+                }
+            },
+            "shaper": "",
+            "ipsec": "",
+            "aliases": {
+                "alias": [
+                    {
+                        "name": "pfB_DNSBL_Ports",
+                        "address": "8081 8443",
+                        "descr": "pfBlockerNG DNSBL VIP Ports",
+                        "type": "port",
+                        "detail": "DO NOT EDIT THIS PORT||DO NOT EDIT THIS PORT"
+                    },
+                    {
+                        "name": "NAS",
+                        "type": "host",
+                        "address": "192.168.1.13",
+                        "descr": "",
+                        "detail": "Entry added Thu, 23 Jul 2020 15:21:16 -0400"
+                    }
+                ]
+            },
+            "proxyarp": "",
+            "cron": {
+                "item": [
+                    {
+                        "minute": "1,31",
+                        "hour": "0-5",
+                        "mday": "*",
+                        "month": "*",
+                        "wday": "*",
+                        "who": "root",
+                        "command": "\/usr\/bin\/nice -n20 adjkerntz -a"
+                    },
+                    {
+                        "minute": "1",
+                        "hour": "3",
+                        "mday": "1",
+                        "month": "*",
+                        "wday": "*",
+                        "who": "root",
+                        "command": "\/usr\/bin\/nice -n20 \/etc\/rc.update_bogons.sh"
+                    },
+                    {
+                        "minute": "1",
+                        "hour": "1",
+                        "mday": "*",
+                        "month": "*",
+                        "wday": "*",
+                        "who": "root",
+                        "command": "\/usr\/bin\/nice -n20 \/etc\/rc.dyndns.update"
+                    },
+                    {
+                        "minute": "*\/60",
+                        "hour": "*",
+                        "mday": "*",
+                        "month": "*",
+                        "wday": "*",
+                        "who": "root",
+                        "command": "\/usr\/bin\/nice -n20 \/usr\/local\/sbin\/expiretable -v -t 3600 virusprot"
+                    },
+                    {
+                        "minute": "30",
+                        "hour": "12",
+                        "mday": "*",
+                        "month": "*",
+                        "wday": "*",
+                        "who": "root",
+                        "command":"\/usr\/

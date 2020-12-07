@@ -1,0 +1,20 @@
+{
+    "callid": "5fce2c530b91f",
+    "action": "interface_stats",
+    "message": "ok",
+    "data": {
+        "stats": {
+            "inpkts": 801571695,
+            "inbytes": 833098334205,
+            "outpkts": 295914789,
+            "outbytes": 104519578494,
+            "inerrs": 0,
+            "outerrs": 312,
+            "collisions": 0,
+            "inmcasts": 148585914,
+            "outmcasts": 2402,
+            "unsuppproto": 0,
+            "mtu": 1500
+        }
+    }
+}

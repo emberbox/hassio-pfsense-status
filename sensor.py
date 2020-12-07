@@ -63,7 +63,6 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
     PfsenseFauxapi = PfsenseFauxapi(host, key, secret, debug=False)
 
     resource = config.get(CONF_RESOURCE).format(host, key)
-
     session = async_get_clientsession(hass, False)
     rest_client = pfSenseClient(hass.loop, session, resource)
 

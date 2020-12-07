@@ -1,0 +1,27 @@
+{
+    "callid": "5fce2770c038b",
+    "action": "gateway_status",
+    "message": "ok",
+    "data": {
+        "gateway_status": {
+            "192.168.0.1": {
+                "monitorip": "192.168.0.1",
+                "srcip": "99.228.130.181",
+                "name": "WANGW",
+                "delay": "0ms",
+                "stddev": "0ms",
+                "loss": "100%",
+                "status": "down"
+            },
+            "99.228.130.1": {
+                "monitorip": "99.228.130.1",
+                "srcip": "99.228.130.181",
+                "name": "WAN_DHCP",
+                "delay": "12.025ms",
+                "stddev": "2.564ms",
+                "loss": "2%",
+                "status": "none"
+            }
+        }
+    }
+}
