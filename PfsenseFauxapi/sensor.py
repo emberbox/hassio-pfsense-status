@@ -9,8 +9,8 @@ Licensed under MIT. All rights reserved.
 https://github.com/nagyrobi/home-assistant-custom-components-pfsense-gateways
 """
 
-import os, sys, json
 import asyncio
+import json
 import logging
 from datetime import timedelta
 
@@ -24,30 +24,27 @@ from homeassistant.const import CONF_NAME, CONF_RESOURCE, CONF_VERIFY_SSL
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.entity import Entity
 
-sys.path.append(os.path.abspath(os.path.join(os.path.curdir, '../client-libs/python')))     # hack to make this work in-place
-from PfsenseFauxapi import PfsenseFauxapi
-
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "pfsense_status"
+DOMAIN = "pfsense_gateways"
 
-DEFAULT_NAME = "pfSense status"
-#DEFAULT_RESOURCE = "http://{0}/status_gateways_json.php?key={1}"
+DEFAULT_NAME = "pfSense gateway"
+DEFAULT_RESOURCE = "http://{0}/status_gateways_json.php?key={1}"
 DEFAULT_KEY = "pfsense"
 
 CONF_HOST = "host"
-CONF_KEY = "apikey"
-CONF_SECRET = "apisecret"
-#CONF_MONITORED_GATEWAYS = "monitored_status_interfaces"
+CONF_KEY = "key"
+CONF_MONITORED_GATEWAYS = "monitored_gateway_interfaces"
 
 SCAN_INTERVAL = timedelta(minutes=2)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
         vol.Required(CONF_HOST): cv.string,
+        vol.Required(CONF_MONITORED_GATEWAYS): vol.All(cv.ensure_list),
         vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
-        vol.Required(CONF_KEY): cv.string,
-        vol.Required(CONF_SECRET): cv.string,
+        vol.Optional(CONF_RESOURCE, default=DEFAULT_RESOURCE): cv.string,
+        vol.Optional(CONF_KEY, default=DEFAULT_KEY): cv.string,
     }
 )
 
@@ -58,9 +55,6 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
     name = config.get(CONF_NAME)
     host = config.get(CONF_HOST)
     key = config.get(CONF_KEY)
-    secret = config.get(CONF_SECRET)
-
-    PfsenseFauxapi = PfsenseFauxapi(host, key, secret, debug=False)
 
     resource = config.get(CONF_RESOURCE).format(host, key)
 
